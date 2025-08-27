@@ -11,6 +11,10 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
+.container {
+  margin-bottom: 40px;
+}
+
 .header {
   max-width: 388px;
   margin: 40px auto;
@@ -24,6 +28,61 @@ body {
   margin: 0 auto;
   width: 24px;
   height: 32px;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.header p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #52525a;
+  letter-spacing: -1%;
+}
+
+.content-container {
+  max-width: 388px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #f3f4f6;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.box {
+  background: #ffffff;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box-img {
+  width: 100%;
+}
+
+.box-text h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 150%;
+}
+
+.box-text p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #52525a;
 }
 
 .author-info {
