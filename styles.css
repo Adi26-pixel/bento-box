@@ -95,3 +95,80 @@ body {
 .author-info a {
   text-decoration: none;
 }
+
+@media screen and (min-width: 768px) {
+  .header {
+    max-width: 612px;
+  }
+
+  .content-container {
+    max-width: 972px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .box-img {
+    width: 304px;
+    height: 262px;
+  }
+
+  .box {
+    align-items: center;
+  }
+
+  .box-1 {
+    flex-direction: column-reverse;
+  }
+
+  .box-2 {
+    flex-direction: column;
+  }
+
+  .box-3 {
+    flex-direction: row-reverse;
+    grid-column: span 2 / span 2;
+    max-width: 924px;
+  }
+
+  .box-4 {
+    flex-direction: row;
+    grid-column: span 2 / span 2;
+    max-width: 924px;
+  }
+
+  .box-5 {
+    flex-direction: row-reverse;
+    grid-column: span 2 / span 2;
+    max-width: 924px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .content-container {
+    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .box-1 {
+    max-width: 368px;
+  }
+
+  .box-2 {
+    max-width: 368px;
+  }
+
+  .box-3 {
+    flex-direction: column-reverse;
+    max-width: 368px;
+  }
+
+  .box-4 {
+    flex-direction: row-reverse;
+    width: 564px;
+    height: 326px;
+  }
+
+  .box-5 {
+    height: 326px;
+    width: 564px;
+  }
+}
