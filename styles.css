@@ -54,6 +54,7 @@ body {
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
   gap: 24px;
 }
 
@@ -65,6 +66,7 @@ body {
   gap: 16px;
   border-radius: 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
 }
 
 .box-img {
@@ -104,71 +106,98 @@ body {
   .content-container {
     max-width: 972px;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .box-img {
-    width: 304px;
-    height: 262px;
-  }
-
-  .box {
-    align-items: center;
+    grid-template-rows: repeat(4, auto);
   }
 
   .box-1 {
+    grid-column: 1 / 2;
     flex-direction: column-reverse;
   }
 
   .box-2 {
+    grid-column: 2 / 3;
     flex-direction: column;
   }
 
   .box-3 {
+    grid-column: 1 / 3;
+    grid-row: 2;
     flex-direction: row-reverse;
-    grid-column: span 2 / span 2;
-    max-width: 924px;
   }
 
   .box-4 {
+    grid-column: 1 / 3;
+    grid-row: 3;
     flex-direction: row;
-    grid-column: span 2 / span 2;
-    max-width: 924px;
   }
 
   .box-5 {
+    grid-column: 1 / 3;
+    grid-row: 4;
     flex-direction: row-reverse;
-    grid-column: span 2 / span 2;
-    max-width: 924px;
+  }
+
+  .box-3,
+  .box-4,
+  .box-5 {
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  .box-3 .box-img,
+  .box-4 .box-img,
+  .box-5 .box-img {
+    width: 275px;
+    height: 262px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .content-container {
     max-width: 1200px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, auto);
   }
 
   .box-1 {
-    max-width: 368px;
+    grid-column: 1 / 5;
+    grid-row: 1;
+    flex-direction: column-reverse;
   }
 
   .box-2 {
-    max-width: 368px;
+    grid-column: 5 / 9;
+    grid-row: 1;
+    flex-direction: column;
   }
 
   .box-3 {
+    grid-column: 9 / 13;
+    grid-row: 1;
     flex-direction: column-reverse;
-    max-width: 368px;
   }
 
   .box-4 {
-    flex-direction: row-reverse;
-    width: 564px;
-    height: 326px;
+    grid-column: 1 / 7;
+    grid-row: 2;
   }
 
   .box-5 {
-    height: 326px;
-    width: 564px;
+    grid-column: 7 / 13;
+    grid-row: 2;
+  }
+
+  .box-4,
+  .box-5 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .box-4 .box-img,
+  .box-5 .box-img {
+    width: 275px;
+    height: 262px;
   }
 }
